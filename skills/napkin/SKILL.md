@@ -6,7 +6,7 @@ description: |
 ---
 
 Read and curate it before work, keep only recurring high-value guidance, organize by priority-sorted categories, and 
-cap each category at top 10 items. Use demand-scoped napkins under `.codex/napkins/` to avoid conflicts between agents.
+cap each category at top 10 items. Use demand-scoped napkins under `.claude/napkins/` to avoid conflicts between agents.
 
 # Create or not a new napking file?
 - Check the existing napkins; if one is already related to your current work, reuse it instead of creating a new one. 
@@ -19,7 +19,7 @@ has a ticket/issue id, so use a simple, unique demand id:
 - Format: `YYYY-MM-DD_<short_title>`
 - Example: `2026-02-23_browserLanguage_mobile`
 
-All napkins for a demand live under `.codex/napkins/`.
+All napkins for a demand live under `.claude/napkins/`.
 
 ## File Naming
 
@@ -27,13 +27,13 @@ All napkins for a demand live under `.codex/napkins/`.
 
 Each agent keeps their own napkin for the demand (no shared file; zero conflict):
 
-- `.codex/napkins/napkin_demanda_<DEMAND_ID>__<agent_name>.md`
+- `.claude/napkins/napkin_demanda_<DEMAND_ID>__<agent_name>.md`
 
 ### If There IS an Orchestrator
 
 All subagents share the same demand napkin file:
 
-- `.codex/napkins/napkin_demanda_<DEMAND_ID>.md`
+- `.claude/napkins/napkin_demanda_<DEMAND_ID>.md`
 
 To avoid interference in a shared file, subagents must write only in their own
 section (append-only), and the orchestrator is the only curator/re-writer.
@@ -48,7 +48,7 @@ must be continuously curated for fast reuse in future sessions.
 First thing, every session:
 
 1) Identify the current **Demand** and its demand id.
-2) Read the demand napkin(s) under `.codex/napkins/` (see rules above).
+2) Read the demand napkin(s) under `.claude/napkins/` (see rules above).
 3) Apply what you learn silently (don't announce it).
 
 Every time you read it, curate it immediately:
@@ -59,7 +59,7 @@ Every time you read it, curate it immediately:
 - Ensure each item contains an explicit "Do instead" action.
 - Enforce category caps (top 10 per category).
 
-If no napkin exists yet, create one for the demand under `.codex/napkins/`.
+If no napkin exists yet, create one for the demand under `.claude/napkins/`.
 
 ### Template (No Orchestrator)
 
